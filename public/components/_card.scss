@@ -1,0 +1,196 @@
+.card {
+  //FUNCTIONALITY
+
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    overflow: hidden;
+
+    &--front {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-blue,
+        $color-black
+      );
+    }
+
+    &--back {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-blue,
+            $color-white
+          );
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+            to right bottom,
+           brown,
+            white
+          );
+        }
+
+          &-2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-yellow,
+                $color-black
+              );
+          }
+          &-3 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-secondary-blue,
+                    $color-secondary-purple
+                  );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  //FRONT SIDE STYLING
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-blue,
+          $color-black
+        ),
+        url("../img/java1.png");
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-blue,
+          $color-black
+        ),
+        url("../img/python1.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-blue,
+          $color-black
+        ),
+        url("../img/sql1.jpg");
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    text-align: right;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-radius: 3.5rem;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-blue, 0.85),
+        rgba($color-black, 0.95)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-blue, 0.85),
+        rgba($color-black, 0.95)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-blue, 0.85),
+        rgba($color-black, 0.95)
+      );
+    }
+  }
+  &__details {
+    padding:3rem;
+
+
+    ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+
+        li {
+            text-align: center;
+            font-size: 2rem;
+            padding: 0rem;
+            color: black;
+            border-bottom: 1px solid $color-white;
+            &:not(:last-child){
+                border-bottom: 1px solid $color-white;
+                
+            }
+
+        }
+
+    }
+  }
+
+&__cta{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); ;
+text-align: center;
+    margin: 0 auto;
+}
+&__price-box{
+    color: white;
+    
+}
+
+&__price-only{
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+&__price-value{
+    font-size: 10rem;
+    font-weight: 100;
+    
+}
+
+}
