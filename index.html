@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <title>Magik Code</title>
+    <title>Demo: Magik Code</title>
   </head>
   <body>
     <header class="header">
@@ -26,7 +26,10 @@
             >Unlock Your Inner Code Wizzard</span
           >
         </h1>
-        <a onclick="scrollToTarget('courses')" href="#courses" class="btn btn--white btn--animated"
+        <a
+          onclick="scrollToTarget('courses')"
+          href="#courses"
+          class="btn btn--white btn--animated"
           >Discover our courses</a
         >
       </div>
@@ -34,7 +37,9 @@
     <main>
       <section class="section-about">
         <div class="u-center-text u-margin-bottom-big">
-          <h2 id="courses" class="heading-secondary">Exciting Courses for Web Developers</h2>
+          <h2 id="courses" class="heading-secondary">
+            Exciting Courses for Web Developers
+          </h2>
         </div>
         <div class="row">
           <div class="col-1-of-2">
@@ -59,7 +64,9 @@
             <p class="paragraph">
               Unlock our courses and find jobs everywhere !
             </p>
-            <a onclick="scrollToTarget('boxes')" href="#boxes" class="btn-text">Learn More &rarr;</a>
+            <a onclick="scrollToTarget('boxes')" href="#boxes" class="btn-text"
+              >Learn More &rarr;</a
+            >
           </div>
           <div class="col-1-of-2">
             <div class="composition">
@@ -87,7 +94,7 @@
           <div class="col-1-of-4">
             <div class="feature-box">
               <i class="feature-box__icon icon-basic-world"></i>
-              <h3  class="heading-tetriary u-margin-bottom-small">
+              <h3 class="heading-tetriary u-margin-bottom-small">
                 Explore your possibilities !
               </h3>
               <p class="feature-box__text">
@@ -234,23 +241,27 @@
           </div>
         </div>
         <div class="u-center-text u-margin-bottom-big">
-          <a onclick="scrollToTarget('reviews')" href="#reviews" class="btn btn--gray">See More!</a>
+          <a
+            onclick="scrollToTarget('reviews')"
+            href="#reviews"
+            class="btn btn--gray"
+            >See More!</a
+          >
         </div>
-      </section> 
+      </section>
 
-    <!-- REVIEWS -->  
-      <section class="section-stories"> 
+      <!-- REVIEWS -->
+      <section class="section-stories">
         <div class="bg-video">
-        <video   class="bg-video__content" autoplay muted loop>
-          <source src="/img/vid.mp4" type="video/mp4">
-            
-          Your Browser is not supporting the video features
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="/img/vid.mp4" type="video/mp4" />
 
-        </video>
+            Your Browser is not supporting the video features
+          </video>
         </div>
         <div class="u-center-text u-margin-bottom-big">
           <h2 id="reviews" class="heading-secondary">
-          Read some of the reviews!
+            Read some of the reviews!
           </h2>
         </div>
         <div class="row">
@@ -273,8 +284,7 @@
             </div>
           </div>
         </div>
-      
-      
+
         <div class="row">
           <div class="story">
             <figure class="story__shape">
@@ -283,7 +293,8 @@
             </figure>
             <div class="story__text">
               <h3 class="heading-tetriariary u-margin-bottom-small">
-                I Don t know how i did it , i just kept doing it and it just kept working!
+                I Don t know how i did it , i just kept doing it and it just
+                kept working!
               </h3>
               <p>
                 The course material was well-organized and easy to understand,
@@ -374,15 +385,15 @@
 
     <div id="app"></div>
     <script>
-     function scrollToTarget(targetId) {
-  const targetElement = document.querySelector(`#${targetId}`);
-  const targetPosition = targetElement.offsetTop;
+      function scrollToTarget(targetId) {
+        const targetElement = document.querySelector(`#${targetId}`);
+        const targetPosition = targetElement.offsetTop;
 
-  window.scrollTo({
-    top: targetPosition,
-    behavior: "smooth"
-  });
-}
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
     </script>
     <script type="module" src="/main.js"></script>
   </body>
